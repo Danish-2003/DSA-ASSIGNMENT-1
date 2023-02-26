@@ -13,7 +13,7 @@ struct Node{
 Node *newNode(int val){
 	Node *temp = new Node;
 	temp->data = val;
-	temp->next = NULL;
+	temp->next = nullptr;
 	return temp;
 }
  
@@ -22,14 +22,14 @@ Node *newNode(int val){
  * */
  Node *createLinkedList(int n){
  	int a;
- 	Node *head = NULL;
- 	Node *tail = NULL; 
+ 	Node *head = nullptr;
+ 	Node *tail = nullptr; 
  
  	for(int i=0;i<n;i++){
  		cin>>a;
  		Node *temp = newNode(a);
  
- 		if(head==NULL){
+ 		if(head==nullptr){
  			head = temp;
  			tail = temp;
  		}
@@ -46,7 +46,7 @@ Node *newNode(int val){
   * printLinkedList will print all the elemets of linked list
   * */
 void printLinkedList(Node *head){
-	while(head!=NULL){
+	while(head!=nullptr){
 		cout<<head->data<<"-> "; 	//print the data of head
 		head = head->next; //move the head to next node
 	}
@@ -59,7 +59,7 @@ void printLinkedList(Node *head){
 int getSizeOfLinkedList(Node *head){
 	int size=0;
 	Node *ptr=head;
-	while(ptr!=NULL){
+	while(ptr!=nullptr){
 		size++;
 		ptr=ptr->next;
 	}
